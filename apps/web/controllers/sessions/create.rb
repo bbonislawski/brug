@@ -12,5 +12,7 @@ module Web::Controllers::Sessions
         redirect_to '/'
       end
     end
+
+    def authenticate!; end
   end
 end

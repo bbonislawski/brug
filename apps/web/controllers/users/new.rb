@@ -4,5 +4,7 @@ module Web::Controllers::Users
 
     def call(params)
     end
+
+    def authenticate!; end
   end
 end

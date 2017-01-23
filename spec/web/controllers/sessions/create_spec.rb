@@ -24,7 +24,7 @@ describe Web::Controllers::Sessions::Create do
 
     response = action.call(params)
 
-    action.session[:user_id].must_equal nil
+    assert_nil action.session[:user_id]
     response[0].must_equal 302
     response[1]['Location'].must_equal '/sign_in'
   end

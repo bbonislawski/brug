@@ -4,5 +4,7 @@ module Web::Controllers::Sessions
 
     def call(params)
     end
+
+    def authenticate!; end
   end
 end
