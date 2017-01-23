@@ -1,0 +1,19 @@
+<h2>Create Account</h2>
+
+<%=
+  form_for :user, '/users' do
+    div class: 'input' do
+      label            :email
+      text_field       :email
+    end
+
+    div class: 'input' do
+      label            :password
+      password_field   :password
+    end
+
+    div class: 'controls' do
+      submit 'Create User'
+    end
+  end
+%>
