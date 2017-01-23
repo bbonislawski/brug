@@ -15,7 +15,12 @@ describe Web::Controllers::Users::Create do
     action.call(params)
 
     action.user.id.wont_be_nil
-    action.user.email.must_equal(email)
+  end
+
+  it 'signs in created user' do
+    action.call(params)
+
+    action.session[:user_id].wont_be_nil
   end
 
   it 'redirects to root' do
